@@ -1,4 +1,5 @@
 {
   "name": "discourse-social-share",
-  "about_url": "http://discourse.org"
+  "about_url": "http://discourse.org",
+  "licence": "https://github.com/discourse/discourse-social-share/blob/master/LICENSE"
 }
