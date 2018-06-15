@@ -1,0 +1,20 @@
+social_id: 
+  default: ""
+  description: 
+    en: This is ID
+  
+social_icon: 
+  default: ""
+  description: 
+    en: This is the icon 
+    
+social_title: 
+  default: ""
+  description: 
+    en: This is the icon    
+  
+social_link: 
+  type: list
+  default: ""
+  description: 
+    en: This is your social link  
