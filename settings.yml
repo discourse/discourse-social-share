@@ -6,7 +6,7 @@ social_id:
 social_icon: 
   default: ""
   description: 
-    en: Social provider icon. Choose the Fontawesome icon <a href="https://fontawesome.com/v4.7.0/icons/">here</a> 
+    en: Social provider icon. Choose the <a href="https://fontawesome.com/v4.7.0/icons/">Fontawesome icon</a> 
     
 social_title: 
   default: ""
