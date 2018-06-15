@@ -1,17 +1,17 @@
 social_id: 
   default: ""
   description: 
-    en: This is ID
+    en: Social provider name
   
 social_icon: 
   default: ""
   description: 
-    en: This is the icon 
+    en: Social provider icon. Choose the Fontawesome icon <a href="https://fontawesome.com/v4.7.0/icons/">here</a> 
     
 social_title: 
   default: ""
   description: 
-    en: This is the icon    
+    en: Text that appears when you move the mouse over the button    
   
 social_link: 
   type: list
