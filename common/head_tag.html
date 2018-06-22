@@ -1,12 +1,18 @@
-<script type="text/discourse-plugin" version="0.8.22">
-  api.addSharingSource({
-    id: settings.social_id,
-    icon: settings.social_icon,
-    title: "",
-    generateUrl: function(link, title) {
-      return settings.social_link + encodeURIComponent(link)  + "&title=" + encodeURIComponent(title);
-    },
-    shouldOpenInPopup: true,
-    popupHeight: 265
-  })
+<script type="text/discourse-plugin" version="0.8.23">
+  var socprov = settings.social_share_links,
+    sec = $.map(socprov.split("|"), $.trim);
+  
+  $.each(sec, function(value) {
+    var sec = $.map(this.split(","), $.trim);
+    api.addSharingSource({
+      id: sec[0],
+      icon: sec[1].toLowerCase(),
+      title: sec[2],
+      generateUrl: function(link, title) {
+        return (sec[3] + encodeURIComponent(link) + "&title=" + encodeURIComponent(title));
+      },
+      shouldOpenInPopup: true,
+      popupHeight: 265
+    });
+  });
 </script>
