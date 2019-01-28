@@ -3,3 +3,8 @@ social_share_links:
   default: ""
   description: 
     en: 'Comma delimited in this order: name, icon, title, link.<br><b>Name:</b> The name of the social provider<br><b>Icon:</b> Choose a <a href="https://fontawesome.com/v4.7.0/icons/">Fontawesome icon</a><br><b>Title:</b> Text that appears when you move the mouse over the button<br><b>Link:</b> the share link. See the <a href="https://meta.discourse.org/t/social-share-component/89980">theme topic</a> for more details'
+svg_icons:
+  default: ''
+  type: 'list'
+  list_type: 'compact'
+  description: 'List of FontAwesome 5 icons used in this theme component'
