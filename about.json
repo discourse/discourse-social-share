@@ -1,6 +1,6 @@
 {
-  "name": "discourse-social-share",
+  "name": "Social Share",
   "component": true,
-  "about_url": "http://discourse.org",
-  "license": "https://github.com/discourse/discourse-social-share/blob/master/LICENSE"
+  "about_url": "https://meta.discourse.org/t/social-share/89980",
+  "license": "https://github.com/discourse/discourse-social-share/blob/main/LICENSE"
 }
