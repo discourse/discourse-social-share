@@ -1,10 +1,7 @@
 social_share_links:
   type: list
   default: ""
-  description:
-    en: 'Comma delimited in this order: name, icon, title, link.<br><ul><li><b>Name:</b> The name of the social provider<br><b></li><li>Icon:</b> Choose a <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=1&m=free">Fontawesome icon</a>. Use prefix <code>fa-</code> for solid icons, <code>far-</code> for regular icons and <code>fab-</code> for brand icons.<br><b></li><li>Title:</b> Text that appears when you move the mouse over the button<br><b></li><li>Link:</b> the share link. See the <a href="https://meta.discourse.org/t/social-share-component/89980">theme topic</a> for more details</li></ul>'
 svg_icons:
   default: ""
   type: "list"
   list_type: "compact"
-  description: "List of FontAwesome 5 icons used in this theme component. Use prefix <code>fa-</code> for solid icons, <code>far-</code> for regular icons and <code>fab-</code> for brand icons."
