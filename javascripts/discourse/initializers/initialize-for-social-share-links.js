@@ -3,7 +3,7 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 export default {
   name: "extend-for-social-share-links",
   initialize() {
-    withPluginApi("0.8.23", (api) => {
+    withPluginApi((api) => {
       // No settings, so we bail
       if (!settings.social_share_links.length) {
         return;
