@@ -1,6 +1,25 @@
 social_share_links:
-  type: list
-  default: ""
+  type: objects
+  default: []
+  schema:
+    name: social share link
+    identifier: name
+    properties:
+      name:
+        type: string
+        required: true
+      icon:
+        type: string
+        required: true
+      title:
+        type: string
+      link:
+        type: string
+        required: true
+      popup_height:
+        type: integer
+        validations:
+          min: 0
 svg_icons:
   default: ""
   type: "list"

@@ -1,40 +1,29 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 
+const DEFAULT_POPUP_HEIGHT = 265;
+
 export default {
   name: "extend-for-social-share-links",
   initialize() {
     withPluginApi((api) => {
-      // No settings, so we bail
-      if (!settings.social_share_links.length) {
-        return;
-      }
-
-      // split different links entered in the settings
-      const socialShareLinks = settings.social_share_links.split("|");
-
-      // loop through each social link
-      for (let i = 0; i < socialShareLinks.length; i++) {
-        const sections = socialShareLinks[i].split(",");
-
-        // loop through each link section
-        for (let j = 0; j < sections.length; j++) {
-          sections[j] = sections[j].trim();
-        }
+      for (const link of settings.social_share_links) {
+        // a height of 0 opens the link in a new tab instead of a popup
+        const popupHeight = link.popup_height ?? DEFAULT_POPUP_HEIGHT;
 
         api.addSharingSource({
-          id: sections[0],
-          icon: sections[1].toLowerCase(),
-          title: sections[2],
-          generateUrl: (link, title) => {
+          id: link.name,
+          icon: link.icon.toLowerCase(),
+          title: link.title,
+          generateUrl: (url, title) => {
             return (
-              sections[3] +
-              encodeURIComponent(link) +
+              link.link +
+              encodeURIComponent(url) +
               "&title=" +
               encodeURIComponent(title)
             );
           },
-          shouldOpenInPopup: (sections[4] || 1) > 0,
-          popupHeight: 1 * sections[4] || 265,
+          shouldOpenInPopup: popupHeight > 0,
+          popupHeight,
         });
       }
     });

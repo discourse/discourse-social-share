@@ -1,5 +1,23 @@
 en:
   theme_metadata:
     settings:
-      social_share_links: 'Comma delimited in this order: name, icon, title, link, height.<br><ul><li><b>Name:</b> The name of the social provider<br><b></li><li>Icon:</b> Choose a <a href="https://fontawesome.com/v6/search?o=r&m=free">FontAwesome icon</a>. Use no prefix for solid icons, <code>far-</code> for regular icons, and <code>fab-</code> for brand icons.<br><b></li><li>Title:</b> Text that appears when you move the mouse over the button<br><b></li><li>Link:</b> the share link.<br><b></li><li>Height:</b> Height of the popup; when zero or less open as a new page. (optional). See the <a href="https://meta.discourse.org/t/social-share-component/89980">theme topic</a> for more details</li></ul>'
+      social_share_links:
+        description: 'Social providers to show in the share dialog. See the <a href="https://meta.discourse.org/t/social-share-component/89980">theme topic</a> for more details.'
+        schema:
+          properties:
+            name:
+              label: Name
+              description: The name of the social provider
+            icon:
+              label: Icon
+              description: Choose a <a href="https://fontawesome.com/v6/search?o=r&m=free">FontAwesome icon</a>. Use no prefix for solid icons, <code>far-</code> for regular icons, and <code>fab-</code> for brand icons.
+            title:
+              label: Title
+              description: Text that appears when you move the mouse over the button
+            link:
+              label: Link
+              description: The share link. The topic URL and title are appended to it.
+            popup_height:
+              label: Popup height
+              description: Height of the share popup in pixels. Leave blank to use the default of 265, or set it to 0 to open the link in a new tab instead of a popup.
       svg_icons: "List of FontAwesome 6 icons used in this theme component. Use no prefix for solid icons, <code>far-</code> for regular icons, and <code>fab-</code> for brand icons."
